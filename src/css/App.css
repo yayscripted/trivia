@@ -1,10 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: pink;
 }
 
 .app {
   text-align: center;
 }
 
+.default { 
+  border: white 1px solid;
+}
+
+.correct {
+  border: green 1px solid; 
+}
 
