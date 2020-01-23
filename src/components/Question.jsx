@@ -8,7 +8,7 @@ class Question extends Component {
   render() {
     return (
       <div className="qFormat">
-        Add your QuestionText, Reset Button and AnswerButtons here.  
+        Which of these roles did Mamoru Miyano do? 
       </div>
     );
   }

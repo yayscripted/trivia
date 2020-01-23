@@ -2,27 +2,29 @@ import React, { Component } from 'react';
 // import components
 import "../css/Answer.css"; 
 
+var answers = ["Kazuto Kirigaya", "Dazai Osamu", "Tetsuya Kuroko", "Lelouch Vi Britania"]
 
 class Answer extends Component {
   
+
   render() {
     return (
     <div className = "aContainer">
-        <div className="a1">
-            AnswerButtons here.  
-        </div>
+        <button className="a1">
+            Kazuto Kirigaya  
+        </button>
 
-        <div className="a2">
-            AnswerButtons here.  
-        </div>
+        <button className="a2">
+            Dazai Osamu  
+        </button>
 
-        <div className="a3">
-            AnswerButtons here.  
-        </div>
+        <button className="a3">
+            Tetsuya Kuroko  
+        </button>
 
-        <div className="a4">
-            AnswerButtons here.  
-        </div>
+        <button className="a4">
+            Lelouch Vi Britania  
+        </button>
     </div>
     );
   }

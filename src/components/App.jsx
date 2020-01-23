@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="app">
         Trivia!
-        <Question/>
+        <button><Question/></button>
         <Answer/>
       </div>
     );
