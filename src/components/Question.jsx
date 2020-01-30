@@ -15,3 +15,28 @@ class Question extends Component {
 }
 
 export default Question;
+
+class QuestionApi{
+  constructor(questionText, choices, correctIndex, userId) {
+    this.questionText = questionText;
+    this.choices = choices;
+    this.correctIndex = question;
+    this.userId = userId;
+  }
+
+  getQuestionText() {
+    return questionText;
+  }
+  
+  getChoices() {
+    return choices;
+  }
+  
+  getCorrectIndex() {
+    return correctIndex;
+  }
+
+  getUserId() {
+    return userId;
+  }
+}
