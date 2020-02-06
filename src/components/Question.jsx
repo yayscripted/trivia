@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { buildFirebase } from '../clients/firebase.js';
 // import components
 import "../css/Question.css"; 
 
@@ -16,27 +17,36 @@ class Question extends Component {
 
 export default Question;
 
+let quest = buildFirebase.database();
+let question = quest.ref("/questions");
+question.once("value").then(inputQuestion);
+
+let inputQuestion = function(data) {
+  const quest = data.val();
+  console.log(quest);
+}
+
 class QuestionApi{
   constructor(questionText, choices, correctIndex, userId) {
     this.questionText = questionText;
     this.choices = choices;
-    this.correctIndex = question;
+    this.correctIndex = correctIndex;
     this.userId = userId;
   }
 
   getQuestionText() {
-    return questionText;
+    return this.questionText;
   }
   
   getChoices() {
-    return choices;
+    return this.choices;
   }
   
   getCorrectIndex() {
-    return correctIndex;
+    return this.correctIndex;
   }
 
   getUserId() {
-    return userId;
+    return this.userId;
   }
 }
