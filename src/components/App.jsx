@@ -7,14 +7,11 @@ import Answer from "./Answer";
 class App extends Component {
 
   render() {
+    console.log(this.props.data[0].question_text);
     return (
       <div className="app">
         Trivia!
-<<<<<<< HEAD
-        <h1><Question/></h1>
-=======
-        <h1> <Question/> </h1>
->>>>>>> d521f5163138c0cc0c6605741df3dc25b88c1448
+    <h1> <Question question={this.props.data[0].question_text}/> </h1>
         <Answer/>
       </div>
     );
