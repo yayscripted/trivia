@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { buildFirebase } from '../clients/firebase.js';
+
 // import components
 import "../css/Question.css"; 
 
@@ -8,8 +9,8 @@ class Question extends Component {
   
   render() {
     return (
-      <div className="qFormat">
-        Which of these roles did Mamoru Miyano do? 
+      <div className="qFormat"> 
+        {this.props.ques};
       </div>
     );
   }
@@ -17,9 +18,9 @@ class Question extends Component {
 
 export default Question;
 
-let quest = buildFirebase.database();
-let question = quest.ref("/questions");
-question.once("value").then(inputQuestion);
+//let quest = buildFirebase.database();
+//let question = quest.ref("/questions");
+//question.once("value").then(inputQuestion);
 
 let inputQuestion = function(data) {
   const quest = data.val();
