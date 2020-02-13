@@ -2,32 +2,20 @@ import React, { Component } from 'react';
 // import components
 import "../css/Answer.css"; 
 
-var answers = ["Kazuto Kirigaya", "Dazai Osamu", "Tetsuya Kuroko", "Lelouch Vi Britania"]
-
-class Answer extends Component {
-  
-
+var answers = ["Osamu Dazai", "Sebastian Michaelis", "Lelouch Vi Britania", "Riku Nanase"];
+class Answer extends React.Component {
   render() {
-    return (
-    <div className = "aContainer">
-        <button className="a1">
-            Kazuto Kirigaya  
-        </button>
-
-        <button className="a2">
-            Dazai Osamu  
-        </button>
-
-        <button className="a3">
-            Tetsuya Kuroko  
-        </button>
-
-        <button className="a4">
-            Lelouch Vi Britania  
-        </button>
-    </div>
-    );
+    let ans = [];
+    {console.log(answers.length);}
+    for (var i=0; i<answers.length; i++) {
+      ans.push(<button><Answers rain={answers[i]} /></button>);
+    }
+    return ans;
   }
+}
+class Answers extends React.Component {
+  render() {
+    return (<div className="answers">{this.props.rain}</div>);  }
 }
 
 export default Answer;
