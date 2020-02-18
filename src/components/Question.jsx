@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import { buildFirebase } from '../clients/firebase.js';
-<<<<<<< HEAD
 
-=======
->>>>>>> 214c78d884f04f195cdcf9f879c42885dece0999
 // import components
 import "../css/Question.css"; 
 
+let i = 0;
 
 class Question extends Component {
-  
-  render() {
-    return (
-<<<<<<< HEAD
-      <div className="qFormat"> 
-        {this.props.ques};
-=======
-      <div className="qFormat">
-        {this.props.question}
->>>>>>> 214c78d884f04f195cdcf9f879c42885dece0999
-      </div>
-    );
+  constructor(props) {
+    super(props);
+    this.state = {count : i}
   }
+    handleClick() {
+      i++;
+      this.setState({
+       count : i,
+      });
+    }
+  render() {
+    
+    return (
+      <div  className="qFormat" onClick={this.handleClick}> 
+        {this.props.ques}
+      </div>
+    )};
 }
 
 export default Question;
