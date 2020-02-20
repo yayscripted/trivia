@@ -5,24 +5,33 @@ import Question from "./Question";
 import Answer from "./Answer";
 
 let i = 0;
+
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {count : i}
   }
-    handleClick() {
+
+  handleClick() {
+    //const q = this.props.app[this.state.count];
+    //if(q.choices[q.correct_choice_index] === ) {
       i++;
       this.setState({
-       count : i,
+        count : i,
       });
-    }
+      console.log(i);
+    //}
+   
+  }
 
   render() {
-    const q = this.props.app[this.state.count].question_text;
+    const q = this.props.app[this.state.count];
     return (
-      <div className="app" onClick={this.handleClick}>
+      <div className="app">
         Trivia!
-        <h1> <Question ques={q}/> </h1>
+        <button  onClick={() => this.handleClick()}>Click</button>
+        <h1> <Question ques={q.question_text}/> </h1>
         <Answer/>
       </div>
     );

@@ -4,23 +4,14 @@ import { buildFirebase } from '../clients/firebase.js';
 // import components
 import "../css/Question.css"; 
 
-let i = 0;
+
 
 class Question extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {count : i}
-  }
-    handleClick() {
-      i++;
-      this.setState({
-       count : i,
-      });
-    }
+ 
   render() {
     
     return (
-      <div  className="qFormat" onClick={this.handleClick}> 
+      <div  className="qFormat"> 
         {this.props.ques}
       </div>
     )};
