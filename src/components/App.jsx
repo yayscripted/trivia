@@ -32,7 +32,11 @@ class App extends Component {
         Trivia!
         <button  onClick={() => this.handleClick()}>Click</button>
         <h1> <Question ques={q.question_text}/> </h1>
-        <Answer/>
+        <button><Answer ans = {q.choices[0]}/></button>
+        <button><Answer ans = {q.choices[1]}/></button>
+        <button><Answer ans = {q.choices[2]}/></button>
+        <button><Answer ans = {q.choices[3]}/></button>
+    
       </div>
     );
   }
