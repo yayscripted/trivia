@@ -39,22 +39,22 @@ class App extends Component {
     const q = this.props.app[this.state.count];
     return (
       <div className="app">
-        <h1 className="title"> Trivia!</h1>
+        <h1 className="title">Trivia!</h1>
 
         
-        <h1> <Question ques={q.question_text}/> </h1>
+        <div className="questionDiv"> <Question ques={q.question_text}/> </div>
         <div className="btnContainer">
           <div className="btnContainers">
-            <button className="ansButton"><Answer ans = {q.choices[0]}/></button>
-            <button className="ansButton"><Answer ans = {q.choices[1]}/></button>
+            <button className="ansButton btn1"><Answer ans = {q.choices[0]}/></button>
+            <button className="ansButton btn2"><Answer ans = {q.choices[1]}/></button>
           </div>
           <div className="btnContainers">
-            <button className="ansButton"><Answer ans = {q.choices[2]}/></button>
-            <button className="ansButton"><Answer ans = {q.choices[3]}/></button>
+            <button className="ansButton btn3"><Answer ans = {q.choices[2]}/></button>
+            <button className="ansButton btn4"><Answer ans = {q.choices[3]}/></button>
           </div>
         </div>
         
-        <button  className="switch" onClick={() => this.handleClick()}>Click</button>
+        <button  className="switch" onClick={() => this.handleClick()}>Next</button>
       </div>
     );
   }
