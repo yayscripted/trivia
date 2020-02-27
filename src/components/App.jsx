@@ -30,12 +30,18 @@ class App extends Component {
     return (
       <div className="app">
         Trivia!
-        <button  onClick={() => this.handleClick()}>Click</button>
+        <button  className="switch" onClick={() => this.handleClick()}>Click</button>
         <h1> <Question ques={q.question_text}/> </h1>
-        <button><Answer ans = {q.choices[0]}/></button>
-        <button><Answer ans = {q.choices[1]}/></button>
-        <button><Answer ans = {q.choices[2]}/></button>
-        <button><Answer ans = {q.choices[3]}/></button>
+        <div className="btnContainer">
+          <div className="btnContainers">
+            <button className="ansButton"><Answer ans = {q.choices[0]}/></button>
+            <button className="ansButton"><Answer ans = {q.choices[1]}/></button>
+          </div>
+          <div className="btnContainers">
+            <button className="ansButton"><Answer ans = {q.choices[2]}/></button>
+            <button className="ansButton"><Answer ans = {q.choices[3]}/></button>
+          </div>
+        </div>
     
       </div>
     );
