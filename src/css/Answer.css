@@ -1,7 +1,9 @@
+
 .aContainer {
     color: white; 
 }
 
-.answerswhite{
-    background-color: red;
-}
+.answers {
+    font-size: 100%;
+    font-weight: bold;
+  } 

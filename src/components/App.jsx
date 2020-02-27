@@ -40,15 +40,21 @@ class App extends Component {
     return (
       <div className="app">
         Trivia!
+
         
         <h1> <Question ques={q.question_text}/> </h1>
-
-        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[0]}/></button>
-        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[1]}/></button>
-        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[2]}/></button>
-        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[3]}/></button>
-
-        <button onClick={() => this.handleClick()}>Next</button> 
+        <div className="btnContainer">
+          <div className="btnContainers">
+            <button className="ansButton"><Answer ans = {q.choices[0]}/></button>
+            <button className="ansButton"><Answer ans = {q.choices[1]}/></button>
+          </div>
+          <div className="btnContainers">
+            <button className="ansButton"><Answer ans = {q.choices[2]}/></button>
+            <button className="ansButton"><Answer ans = {q.choices[3]}/></button>
+          </div>
+        </div>
+        
+        <button  className="switch" onClick={() => this.handleClick()}>Click</button>
       </div>
     );
   }
