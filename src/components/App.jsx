@@ -30,21 +30,11 @@ class App extends Component {
     //}
   }
 
-  handleAnswer = (index, correctIndex) => {
-    //const answer = event.target.value;
-    console.log(index);
-    if(index === correctIndex) {
-      this.setState({
-        color:"green"
-      })
-    }else{
-      this.setState({
-        color:"red"
-      })
-
-    }
-    
-    //}
+  colorChange(q) {
+    //if( q === )
+    this.setState({
+      color: "red"
+    });
   }
 
     
@@ -57,7 +47,7 @@ class App extends Component {
     console.log(q);
     return (
       <div className="app">
-        Trivia!
+        <h1 className="title"> Trivia!</h1>
 
         
         <h1> <Question ques={q.question_text}/> </h1>
