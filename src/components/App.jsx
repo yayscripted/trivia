@@ -10,7 +10,10 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {count : i}
+    this.state = {
+      count : i,
+      color : "white"
+    }
   }
 
   handleClick() {
@@ -22,17 +25,30 @@ class App extends Component {
       });
       console.log(i);
     //}
-   
   }
 
+  colorChange(q) {
+    //if( q === )
+    this.setState({
+      color:"red"
+    })
+  }
+
+  
   render() {
     const q = this.props.app[this.state.count];
     return (
       <div className="app">
         Trivia!
-        <button  onClick={() => this.handleClick()}>Click</button>
+        
         <h1> <Question ques={q.question_text}/> </h1>
-        <Answer/>
+
+        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[0]}/></button>
+        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[1]}/></button>
+        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[2]}/></button>
+        <button className={this.state.color} onClick={() => this.colorChange()}><Answer ans={q.choices[3]}/></button>
+
+        <button onClick={() => this.handleClick()}>Next</button> 
       </div>
     );
   }
