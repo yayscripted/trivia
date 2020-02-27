@@ -30,8 +30,8 @@ class App extends Component {
   colorChange(q) {
     //if( q === )
     this.setState({
-      color:"red"
-    })
+      color: "red"
+    });
   }
 
   
@@ -39,7 +39,7 @@ class App extends Component {
     const q = this.props.app[this.state.count];
     return (
       <div className="app">
-        Trivia!
+        <h1 className="title"> Trivia!</h1>
 
         
         <h1> <Question ques={q.question_text}/> </h1>
