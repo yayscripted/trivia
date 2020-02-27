@@ -55,3 +55,15 @@ body {
   font-size: 20px;
   border-radius: 5%;
 }
+
+.white{
+  background-color: white;
+}
+
+.green{
+  background-color: green;
+}
+
+.red{
+  background-color: red;
+}
