@@ -71,10 +71,10 @@ class App extends Component {
 
     return (
       <div className="app">
-        <h1 className="title"> Trivia!</h1>
+        <h1 className="title">Trivia!</h1>
 
         
-        <h1> <Question ques={q.question_text}/> </h1>
+        <div className="questionDiv"> <Question ques={q.question_text}/> </div>
         <div className="btnContainer">
           <div className="btnContainers">
             <button className={button0} onClick={() => this.handleAnswer(0, ci)}><Answer ans = {q.choices[0]}/></button>
