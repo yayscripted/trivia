@@ -4,8 +4,8 @@ import '../css/App.css';
 import Question from "./Question"; 
 import Answer from "./Answer";
 
-let i = 0;
 
+let i = 0;
 class App extends Component {
 
   constructor(props) {
@@ -86,7 +86,7 @@ class App extends Component {
           </div>
         </div>
 
-        <button  className="switch" onClick={() => this.handleClick()}>Click</button>
+        <button  className="switch" onClick={() => this.handleClick()}>Next</button>
       </div>
     );
   }
