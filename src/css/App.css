@@ -30,7 +30,7 @@ body {
 }
 
 .questionDiv {
-  height: 17vh;
+  height: 7vh;
 }
 
 .ansButton {
@@ -42,20 +42,20 @@ body {
 } 
 
 .btn1 {
-  background-color: red;
+  background-color: #00FFCC;
   
 }
 
 .btn2 {
-  background-color: blue;
+  background-color: #E4A4EE;
 }
 
 .btn3 {
-  background-color: green;
+  background-color: #FFAA7B;
 }
 
 .btn4 {
-  background-color: yellow;
+  background-color: #FEE975;
 }
 
 .ansButton:hover {
@@ -85,9 +85,9 @@ body {
 }
 
 .green{
-  background-color: green;
+  background-color: #17D3FF;
 }
 
 .red{
-  background-color: red;
-}
+  background-color: rgb(255, 38, 0);
+}  
