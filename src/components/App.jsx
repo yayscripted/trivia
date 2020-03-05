@@ -14,12 +14,14 @@ class App extends Component {
     this.state = {
       count : i,
       buttonActive : true,
+      nextButtonActive : true
     }
   }
 
   handleClick() {
     //const q = this.props.app[this.state.count];
     //if(q.choices[q.correct_choice_index] === ) {
+      if(this.state.nextButtonActive === true) {
       i++;
       this.setState({
         count : i,
@@ -27,8 +29,10 @@ class App extends Component {
         button1: "#E4A4EE",
         button2: "#FFAA7B",
         button3: "#FEE975",
-        buttonActive : true
+        buttonActive : true,
+        nextButtonActive : false
       });
+    }
       console.log(i);
     //}
   }
@@ -37,6 +41,7 @@ class App extends Component {
     let obj = {};
     let iButtonClass;
     let cButtonClass;
+    this.setState({nextButtonActive : true})
     if(this.state.buttonActive === true) {
       this.setState({
         button0: "white",
