@@ -59,7 +59,7 @@ body {
 }
 
 .ansButton:hover {
-  background-color: lightgrey;
+  border: darkgrey double 5px;
 }
 
 .btnContainer {
